@@ -5,7 +5,7 @@ def is_soc_out_of_range(soc):
 def is_charge_rate_out_of_range(charge_rate):
     return charge_rate > 0.8
 def battery_is_ok(temperature, soc, charge_rate):
-    return not (is_temperature_out_of_range(temperature) or is_soc_out_of_range(soc) or is_charge_rate_out_of_range(charge_rate))
+    return not (is_temperature_out_of_range(temperature) or is_soc_out_of_range(soc) or is_charge_rate_out_of_rang(charge_rate))
 if __name__ == '__main__':
     assert battery_is_ok(25, 70, 0.7) is True
     assert battery_is_ok(50, 85, 0) is False
